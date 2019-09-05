@@ -1,0 +1,469 @@
+//////////////////////////////////////
+//LOGO
+
+.logo {
+    width: 10%;
+    margin-left: 1rem;
+}
+
+/////////////////////////////////////////
+// SEARCH
+.search {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rem;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: $color-grey-light-2;
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.5rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: #f0eeee;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-grey-light-4;
+
+        }
+
+    }
+
+    &__input:focus + &__button {
+        background-color: #f0eeee;
+
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-grey-light-2;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+
+
+    }
+
+    & i.fas.fa-search {
+        color: grey;
+        opacity: .6;
+
+    }
+}
+
+
+
+
+
+
+/////////////////////////////////
+//SIDE NAVIGATION
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: $color-primary;
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s;
+
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+
+    &__link:link,
+    &__link:visited {
+        color: $color-grey-light-1;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        z-index: 10;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        i{
+            font-size: 1.75rem;
+            height: 1.75rem;
+            margin-right: 2rem;
+            
+        }
+       
+
+
+    }
+
+
+}
+
+///////////////////////////
+// LEGAL TEXT
+.legal {
+    font-size: 1.2rem;
+    color: $color-grey-light-4;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+///////////////////////////
+// GALLERY
+
+.gallery {
+    display: flex;
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+///////////////////////////
+// Beach OVERVIEW
+.overview {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-grey-light-2;
+    
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
+
+    }
+
+    &__stars{
+        margin-top: 0.4rem;
+        margin-right: auto;
+        display: flex;
+        
+
+    }
+
+    & i{
+        font-size: 1.2rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        color: $color-primary;
+    
+    }
+
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-location {
+        margin-right: .5rem;
+    }
+
+    &__rating {
+        background-color: $color-primary;
+        color: #fff;
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+        align-self: stretch;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    &__rating-average {
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -3px;
+
+    }
+
+    &__rating-count {
+        font-size: .8rem;
+        text-transform: uppercase;
+
+    }
+
+    
+}
+
+///////////////////////////////
+//BUTTON INLINE
+
+.btn-inline {
+    border: none;
+    color: $color-primary;
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
+    &:hover {
+        color: $color-grey-dark-1;
+
+        span {
+            margin-left: 8px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite; 
+
+    }
+
+}
+
+@keyframes pulsate {
+    0% {
+      transform: scale(1);
+      transform-origin: 0 0;
+      filter: none;
+    }
+   
+    50% {
+      transform: scale(1.05);
+      transform-origin: 0 0;
+      filter: drop-shadow(0 1rem 1rem black);
+      
+    }
+   
+    100% {
+      transform: scale(1);
+      transform-origin: 0 0;
+      filter: none;
+    }
+  }
+
+  ///////////////////////////////
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+///////////////////////////////
+// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: $line;
+    border-bottom: $line;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex-basis: 50%;
+        margin-bottom: .7rem;
+        
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+  
+    }
+}
+
+
+///////////////////////////////
+// REVIEWS
+.review {
+    position: relative;
+    background-color: #fff;
+    box-shadow: $shaddow-light;
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    &__user-box {
+        margin-right: auto;
+        
+    }
+
+    &__user-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        color: $color-grey-dark-3;
+
+    }
+
+    &__rating {
+        color: $color-primary;
+        font-size: 2.2rem;
+        font-weight: 300;
+
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: $color-grey-light-2;
+        font-family: sans-serif;
+        z-index: 1;   
+    }
+
+    }
+
+///////////////////////////////
+// Button
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__news {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+
+    }
+}
+
+///////////////////////////////
+// Button
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+    color: rgb(71, 71, 71);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+    }
+
+    &__visible {
+        display: inline-block;
+        padding: 2rem 7.5rem;
+
+    }
+
+    &__invisible {
+        display: inline-block;
+        position: absolute;
+        padding: 2rem 0rem;
+        left: 0;
+        top: -100%;
+
+    }
+
+    &:hover  &__visible {
+        transform: translateY(100%);
+        
+    }
+    &:hover  &__invisible {
+        top: 0;
+        
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+

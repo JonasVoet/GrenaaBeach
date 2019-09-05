@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./sass/main.css">
+        <link rel="shortcut icon" type="image/png" href="./img/favicon-32x32.png">
+        
+        <title>Grenaa Strand &mdash; Danmarks næstbedste strand!</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <img src="img/logo.png" alt="logo" class="logo">
+
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Søg her"> 
+                    <button class="search__button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
+                </nav>
+            </header>
+
+
+            <div class="content">
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#" class="side-nav__link">
+                                <i class="fas fa-home"></i>
+                                <span>Forside</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <i class="fas fa-search-location"></i>
+                                <span>Find os</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <i class="fas fa-phone-volume"></i>
+                                <span>Kontakt</span>
+                            </a>
+                        </li>
+
+                       
+                    </ul>
+
+                    <div class="legal">
+                        &copy; 2019 Grenaa Strand
+                    </div>
+                </nav>
+
+
+                <main class="beach-view">
+                    <div class="gallery">
+                        <figure class="gallery__item">
+                            <img src="./img/img1.jpg" alt="Photo of hotel 1" class="gallery__photo">
+                        </figure>
+
+                        <figure class="gallery__item">
+                            <img src="./img/img3.jpg" alt="Photo of hotel 2" class="gallery__photo">
+                        </figure>
+
+                        <figure class="gallery__item">
+                            <img src="./img/img2.jpg" alt="Photo of hotel 3" class="gallery__photo">
+                        </figure>
+                    </div>
+
+                    <div class="overview">
+                        <h1 class="overview__heading">
+                            Grenaa Strand
+                        </h1>
+                        <div class="overview__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <div class="overview__location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <button class="btn-inline">Grenaa, 8500</button>
+                        </div>
+
+                        <div class="overview__rating">
+                            <div class="overview__rating-average">8.5</div>
+                            <div class="overview__rating-count">435 anmeldelser</div>
+                        </div>
+
+                    </div>
+
+                    <div class="detail">
+                        <div class="description">
+                            <p class="paragraph">
+                                Stranden ligger syd for Grenaa Havn og er egentlig to strande, adskilt af Polderrevet, som er et meget velbesøgt fiskested med hornfisk og ørreder.
+                            </p>
+
+                            <p class="paragraph">
+                                Stranden nærmest havnen ligger med sommerhuse i klitten og er meget børnevenlig med lav vanddybde og det fineste sand.
+                                Sommeren igennem kan man bruge beachvolleybanen eller deltage i mange aktiviteter.
+                            </p>
+                            <ul class="list">
+                                <li class="list__item">Toilet</li>
+                                <li class="list__item">Nøgenbadning</li>
+                                <li class="list__item">Brusere</li>
+                                <li class="list__item">Parkeringsplads</li>
+                                <li class="list__item">Kiosk</li>
+                                <li class="list__item">Livredder</li>
+                                <li class="list__item">Børnvenlig</li>
+                                <li class="list__item">Tildelt Blå Flag (2017)</li>
+                            </ul>
+                        </div>
+
+                        <div class="user-reviews">
+                           <figure class="review">
+                            <blockquote class="review__text">
+                                    Vi to en hel dag til Grenå Strand og vi blev overrasket over muligherne for omklædning og toilet. 
+                            </blockquote> 
+                            <figcaption class="review__user">
+                                <img src="img/user-1.jpg" alt="" class="review__photo">
+                                <div class="review__user-box">
+                                    <p class="review__user-name">Jonas</p>
+                                    <p class="review__user-date">Seb 23, 2019</p>
+                                </div>
+                                <div class="review__rating">5.1</div>
+                            </figcaption>  
+                           </figure>
+
+                           <figure class="review">
+                                <blockquote class="review__text">
+                                    Stranden er et smukt natur sted med skov, strand, havn og badeanstalt. Fantastisk udflugtssted.
+                                </blockquote> 
+                                <figcaption class="review__user">
+                                    <img src="img/user-2.jpg" alt="" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Sarah</p>
+                                        <p class="review__user-date">Aug 5, 2019</p>
+                                    </div>
+                                    <div class="review__rating">4.2</div>
+                                </figcaption>  
+                               </figure>
+
+                               <button class="btn-inline">Se alle<span>&rarr;</span></button>
+                        </div>
+
+
+                    </div>
+                    <div class="cta">
+                            <h2 class="cta__news">
+                                Gode nyheder! Gratis is til alle børn
+                            </h2>
+                            <button class="btn">
+                                <span class="btn__visible">Læs mere!</span>
+                                <span class="btn__invisible">Det koster intet</span>
+                            </button>
+                        </div>
+                </main>
+            </div>
+        </div>
+        
+    </body>
+</html>
