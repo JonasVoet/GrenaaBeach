@@ -26,6 +26,7 @@ body {
   background-size: cover;
   background-position: center center;
   min-height: 100vh;
+  background-attachment: fixed;
 }
 
 .logo {
@@ -279,12 +280,6 @@ body {
   margin-left: 8px;
 }
 
-.btn-inline:focus {
-  outline: none;
-  -webkit-animation: pulsate 1s infinite;
-          animation: pulsate 1s infinite;
-}
-
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(1);
@@ -495,12 +490,6 @@ body {
 
 .btn:hover .btn__invisible {
   top: 0;
-}
-
-.btn:focus {
-  outline: none;
-  -webkit-animation: pulsate 1s infinite;
-          animation: pulsate 1s infinite;
 }
 
 .container {

@@ -39,4 +39,5 @@ body {
     line-height: 1.6;
     @include background-img;
     min-height: 100vh; 
+    background-attachment: fixed;
 }
